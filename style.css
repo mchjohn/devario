@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+header .logo-img {
+  width: 100px;
+  margin: 25px;
+}
+
+header .menu-img {
+  width: 80px;
+  float: right;
+  margin-right: 20px
+}
+
+main {
+  margin: 0 auto;
+}
+
+main .article-img {
+  margin-top: 30px;
+}
+
+article {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+article > ul {
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+article > ul li {
+  text-align: start;
+}
+
+article > ul li a {
+  text-decoration: none;
+}
+
+article > ul li h1, h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 400;
+  color: #333;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+article > ul li p {
+  color: #999;
+  font-size: 1em;
+}
+
+article > ul li h1:hover {
+  color: #24bfcf;
+  cursor: pointer;
+}
+
+.data {
+  margin-top: 10px;
+  background-color: #24bfcf;
+  width: 80px;
+  padding: 2px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #333;
+}
+
+.hr {
+  width: 125px;
+  margin: 5px 0 20px 0 ;
+  border-bottom: 1px solid rgba(85, 85, 85, 0.288);
+}
+
+.look {
+  margin: 0 auto;
+  width: 100px;
+}
+
+footer .footer-img {
+  width: 200px;
+}
+
+footer {
+  margin: 30px auto;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+@media (max-width: 760px) {
+  header .logo-img {
+    width: 100px;
+    margin: 10px;
+  }
+
+  header .menu-img {
+    width: 70px;
+  }
+
+  main .article-img {
+    margin-top: 20px;
+    width: 210px
+  }
+}

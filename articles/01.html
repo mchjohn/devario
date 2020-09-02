@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="article.css">
+  <title>Utilizando o Sequelize para conectar com banco de dados</title>
+</head>
+
+<body>
+  <div class="article">
+    <h1>O que é o Sequelize?</h1>
+
+    <p>
+      Sequelize é um ORM(Object-Relational Mapper) para NodeJs baseado em promise, utilizado para os bancos de dados: Postgres, MySQL, MariaDB, SQLite e Microsoft SQL Server. Como ORM sequelize faz mapeamento de dados relacionais (tabelas, colunas e linhas) para objetos JavaScript.
+    </p>
+
+    <p>
+      Permite criar, buscar, atualizar e remover dados do banco utilizando métodos JS, permite modificar a estrutura de tabelas, facilitando na criação, população e migração do banco de dados.
+    </p>
+
+    <h2>Iniciando o projeto</h2>
+    <p>
+      O sequelize está disponível para instalação através do npm (ou yarn).
+    </p>
+
+    <img src="../images/npm-i-sequelize.png" alt="instalando sequelize">
+    <span class="legende">Comando para instalar a biblioteca sequelize. A partir da versão 5 do npm pode-se omitir o '--save', pois já vem como padrão.</span>
+      
+    <p>  
+      Agora é hora de instalar o driver do banco de dados, neste caso MySQL.
+      Para isso basta digitar o seguinte comando:
+    </p>
+
+    <img src="../images/npm-i-mysql2.png" alt="instalando mysql2">
+    <span class="legende">Comando para instalar a biblioteca mysql2.</span>
+    
+    <h2>Conectando-se a um banco de dados</h2>
+
+    <p>
+      Para conectar-se ao banco, cria-se uma instancia Sequelize. E passa os parâmetros de conexão, esse processo pode ser feito de duas formas: Passando uma única URI, ou passando parâmetros separadamente, que é o método que vou utilizar aqui.
+    </p>
+
+    <img src="../images/create-connection-db.png" alt="criando conexão com db" class="wi">
+    <span class="legende">Criando a conexão com o banco de dados MySQL.</span>
+
+    <p>
+      O código acima cria a conexão com o banco, onde ‘sequelize é uma instancia de ‘Sequelize’, e ‘database’ recebe o nome da sua tabela no banco de dados que será utilizado, e ‘username’ o nome de usuário do banco, e ‘password’ a senha do seu banco de dados, e ‘host’, local onde encontra-se sua aplicação e ‘dialect’ o dialeto de banco de dados a ser usado. 
+    </p>
+
+    <h2>Testando a conexão</h2>
+    <p>
+      Use o metodo .authenticate() para fazer autenticação e se conectar efetivamente no banco de dados.
+    </p>
+
+    <img src="../images/conectede-db.png" alt="conectando ao db" class="wi">
+    <span class="legende">Conectando-se efetivamente ao banco de dados MySQL.</span>
+
+    <h2>Algumas observações</h2>
+    <p>
+      Feito isso sua conexão com o banco de dados utilizando o sequelize está pronta.
+      Por padrão sequelize mantem a conexão aberta e usará a mesma conexão para todas as consultas. Caso precise fechar utilize o método sequelize.close() (é assíncrono e retorna uma promisse)
+      
+      Por convenção Sequelize com ‘S’ maiúsculo refere-se a própria biblioteca e sequelize com ‘s’ minúsculo representa uma instancia de Sequelize, portanto sequelize representa uma conexão com o banco de dados.
+    </p>
+
+    <p>
+      Prontinho! Se você segui os passos sua conexão com bando de dados utilizando o sequelize deve estar funcionando corretamente.
+    </p>
+    <p>
+      O próximo passo é criar as models, mas essa vai ficar pra uma próxima.
+
+      Muito obrigado! <span style="color:#af2598;">\0></span>
+    </p>
+
+    <div class="data">31/08/2020</div>
+  </div>
+
+  <footer>
+    <p>© Michel John</p>
+  </footer>
+</body>
+
+</html>
