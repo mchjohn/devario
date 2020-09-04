@@ -51,11 +51,7 @@
       Considere que queremos criar uma model para representar os usuários, que vão ter firstName e um lastName. Daremos a model o nome de User e a tabela no banco de dados de Users.
     </p>
 
-    <p>
-      
-    </p>
-
-    <img src="../images/create-model.png" alt="Criando a Model">
+    <img src="../images/create-model.png" alt="Criando a Model"  class="wi">
     <span class="legende">Comandos para criar uma model com nome de User.</span>
 
     <p>
@@ -63,6 +59,72 @@
 
       note que 'define()' é um metodo interno do sequelize.
     </p>
+
+    <p>
+      Note que, no método acima, não criamos o nome da tabela 'Users' explicitamente. Apenas fornecemos o nome da model 'User'.
+    </p>
+
+    <p>
+      Não forneci o nome da tabela propositalmente, pois por padrão quando o nome da tabela não é fornecido, Sequelize automaticamente cria uma tabela com o nome pluralizado da model. Essa pluralização é feita internamente pela biblioteca 'inflection', Sendo assim nossa tabela recebe o nome 'Users'.
+    </p>
+
+    <p>
+      Caso você não queira essa comportamento padrão, você pode usar a opção do 'freezeTableName: true'. Dessa forma Sequelize dara a tabela o mesmo nome da model, nesse caso 'User'.
+      <br>
+      Seu código ficara como mostrado na imagem abaixo.
+    </p>
+
+    <img src="../images/create-model-freeze.png" alt="Previnindo comportamento padrão"  class="wi">
+    <span class="legende">Código para previnir comportamento padrão na hora de nomear a tabela.</span>
+
+    <p>
+      Você também pode dizer ao Sequelize qual o nome que você quer dar a tabela.
+      <br>
+      Para isso basta substituir o 'freezeTableName: true' por 'tableName: "NomeQueQuerDarATabela"'.
+      <br>
+      Seu código ficara como mostrado na imagem abaixo.
+    </p>
+
+    <img src="../images/create-model-name.png" alt="Previnindo comportamento padrão" class="wi">
+    <span class="legende">Código para dizer ao Sequelize o nome da tabela.</span>
+
+    <h2>Sincronizando a Model</h2>
+
+    <p>
+      Quando você cria a Model, está infomando ao Sequelize algumas coisas relacionadas a sua tabela no banco de Dados.
+      <br>
+      Mas, e no caso da tabela não existir no banco de dados? ou se ela existir, mas tiver colunas diferentes, mais ou menos colunas ou qualquer outra diferença?
+    </p>
+
+    <p>
+      Bom nesse caso teremos que fazer uma sincronização da model. Para isso podemos chamar a função 'model.sync(opções)'. Essa é uma função assíncrona que retorna uma promise.
+      <br>
+      Quando essa função é chamada o Sequelize executa uma consulta SQL ao banco de dados.
+      <br>
+      (Note que isso altera apenas a tabela no banco de dados e não na model)
+    </p>
+
+    <p>
+      User.sync() - cria a tabela se ela não existir, caso ela exista não fara nada.
+      <br>
+      User.sync({force: true}) - descarta a tabela existente e cria uma nova.
+      <br>
+      User.sync({alter: true}) - verifica a tabela existente no banco de dados e faz as alterações necessárias conforme a Model.
+    </p>
+
+    <p>
+      Sendo assim para criar efetivamente a tabela no banco de dados digite o código da imagem abaixo.
+    </p>
+
+    <img src="../images/create-table.png" alt="Previnindo comportamento padrão" class="wi">
+    <span class="legende">Código para criar efetivamente a tabela no db.</span>
+
+    <p>
+      A estrutura do seu banco de dados ficara semelhante a isso:
+    </p>
+
+    <img src="../images/in-db.png" alt="Previnindo comportamento padrão">
+    <span class="legende">Estrutura da tabela no banco de dados.</span>
 
     <p>
       Bom... Acho que é isso, com esse artigo e o anterio espero que voçê possa ser capaz de criar suas proprias conexões e models utilizando o sequelize.
