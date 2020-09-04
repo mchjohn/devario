@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="article.css">
+  <title>Criando a Model utilizando Sequelize</title>
+</head>
+
+<body>
+  <div class="article">
+    <h1>Criando Models com Sequelize</h1>
+
+    <p>
+      No artigo passado eu mostrei como instalar o Sequelize e o mysql2 e criar a conexão  como banco de dados. Caso você não tenha lido o artigo, leia <a href="01.html" target="_blank">aqui</a>.
+    </p>
+
+    <h2>Fundamentos da Model</h2>
+
+    <p>
+      Os Models são a essência do sequelize. Em termos gerais um modelo (model) é uma abstração que representa um objeto. Trazendo para o conceito de banco de dados, representa uma tabela em seu banco de dados. Já no sequelize, é uma classe que estende Model.
+      <br>
+      Ou seja, a classe model criada por você vai herdar da Model do Sequelize.
+    </p>
+
+    <p>
+      O model diz ao sequelize qual é o nome da tabela no banco de dados, quais colunas ela possui (e seus tipos).
+    </p>
+
+    <p>
+      Um model no Sequelize tem um nome, que não precisa necessariamente ser o mesmo nome da tabela que ele representa no banco de dados. Por convenção os models tem nomes no singular (ex. Usuario), enquanto as tabelas tem nomes no plural (ex. Usuarios).
+    </p>
+
+    <h2>Definindo uma Model</h2>
+    <p>
+      Os models podem ser definidos de duas formas no Sequelize:
+      <br>
+      Chamando sequelize.define(NomeDaModel, atributos, opções) ou estendendo a model e chamando o init(atributos, opções)
+      <br>
+      Aqui irei mostrar apenas o primeiro caso, utilizando define()
+    </p>
+
+    <p>
+      Depois que o model é definido, ele estará disponível em sequelize.models por seu nome de model.
+    </p>
+
+    <h2>Criando a Model</h2>
+
+    <p>
+      Considere que queremos criar uma model para representar os usuários, que vão ter firstName e um lastName. Daremos a model o nome de User e a tabela no banco de dados de Users.
+    </p>
+
+    <p>
+      
+    </p>
+
+    <img src="../images/create-model.png" alt="Criando a Model">
+    <span class="legende">Comandos para criar uma model com nome de User.</span>
+
+    <p>
+      O código acima cria uma model com nome de 'User', contendo 2 métodos 'firstName' e 'lastName', ambos do tipo string e não nulos e atribui a variável 'User'.
+
+      note que 'define()' é um metodo interno do sequelize.
+    </p>
+
+    <p>
+      Bom... Acho que é isso, com esse artigo e o anterio espero que voçê possa ser capaz de criar suas proprias conexões e models utilizando o sequelize.
+    </p>
+    
+    <p>
+      Muito obrigado, até a proxima! <span style="color:#af2598;">\0></span>
+    </p>
+
+    <div class="data">03/09/2020</div>
+  </div>
+
+  <footer>
+    <p>© Michel John</p>
+  </footer>
+</body>
+
+</html>

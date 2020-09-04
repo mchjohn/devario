@@ -17,6 +17,10 @@ body {
   text-align: start;
 }
 
+.article a {
+  color: #333;
+}
+
 .article p {
   margin-bottom: 10px;
 }

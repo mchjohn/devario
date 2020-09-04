@@ -22,24 +22,43 @@
 
     <h2>Iniciando o projeto</h2>
     <p>
-      O sequelize está disponível para instalação através do npm (ou yarn).
+      Primeiro vamos criar a pasta que irá guardar nosso arquivo, eu chamarei de apiSequelize. Agora abra essa pasta no VSCode, em seguida abra o terminal do VSCode e digite npm init.
+    </p>
+
+    <img src="../images/npm-init.png" alt="instalando sequelize">
+    <span class="legende">Comando para criar o arquivo package.json.</span>
+
+    <p>
+      Esse comando vai criar o arquivo package.json que contém as configurações do projeto, como por exemplo, url do repositório, versão do projeto, as dependências instaladas e etc.
+    </p>
+
+    <p>
+      Feito isso, vamos instalar as duas dependências que iremos utilizar, Sequelize e mysql2, para isso basta digitar no mesmo terminal os seguintes comandos:
     </p>
 
     <img src="../images/npm-i-sequelize.png" alt="instalando sequelize">
     <span class="legende">Comando para instalar a biblioteca sequelize. A partir da versão 5 do npm pode-se omitir o '--save', pois já vem como padrão.</span>
-      
-    <p>  
-      Agora é hora de instalar o driver do banco de dados, neste caso MySQL.
-      Para isso basta digitar o seguinte comando:
-    </p>
 
     <img src="../images/npm-i-mysql2.png" alt="instalando mysql2">
     <span class="legende">Comando para instalar a biblioteca mysql2.</span>
+
+    <p>
+      Agora o próximo passo é criar o arquivo e começar a codar. Crie um arquivo na pasta apiSequelize, chamarei o arquivo de app.js. Agora nesse arquivo vamos importar o modulo Sequelize que acabamos de instalar, para isso digite o seguinte comando:
+    </p>
+
+    <img src="../images/import-sequelize.png" alt="instalando mysql2">
+    <span class="legende">Comando para importar a biblioteca Sequelize.</span>
     
     <h2>Conectando-se a um banco de dados</h2>
 
     <p>
-      Para conectar-se ao banco, cria-se uma instancia Sequelize. E passa os parâmetros de conexão, esse processo pode ser feito de duas formas: Passando uma única URI, ou passando parâmetros separadamente, que é o método que vou utilizar aqui.
+      Realizado os passos acima é hora de conectar-se ao banco de dados MySQL.<br>
+      
+      (Aqui estou considerando que você já tenha instalado e configurado o MySql em seu computador.)<br>
+    </p>
+
+    <p>
+      Para conectar-se ao banco, cria-se uma instancia Sequelize, e passa os parâmetros de conexão, esse processo pode ser feito de duas formas: Passando uma única URI, ou passando parâmetros separadamente, que é o método que vou utilizar aqui.
     </p>
 
     <img src="../images/create-connection-db.png" alt="criando conexão com db" class="wi">
@@ -51,7 +70,8 @@
 
     <h2>Testando a conexão</h2>
     <p>
-      Use o metodo .authenticate() para fazer autenticação e se conectar efetivamente no banco de dados.
+      Use o metodo .authenticate() para fazer autenticação e se conectar efetivamente no banco de dados.<br>
+      Aqui estou utilizando o then() caso a conexão ocorra com sucesso e o catch() caso de algum erro.
     </p>
 
     <img src="../images/conectede-db.png" alt="conectando ao db" class="wi">
@@ -59,15 +79,18 @@
 
     <h2>Algumas observações</h2>
     <p>
-      Feito isso sua conexão com o banco de dados utilizando o sequelize está pronta.
+      Feito isso sua conexão com o banco de dados utilizando o sequelize está pronta.<br>
       Por padrão sequelize mantem a conexão aberta e usará a mesma conexão para todas as consultas. Caso precise fechar utilize o método sequelize.close() (é assíncrono e retorna uma promisse)
+    </p>
       
+    <p>
       Por convenção Sequelize com ‘S’ maiúsculo refere-se a própria biblioteca e sequelize com ‘s’ minúsculo representa uma instancia de Sequelize, portanto sequelize representa uma conexão com o banco de dados.
     </p>
 
     <p>
-      Prontinho! Se você segui os passos sua conexão com bando de dados utilizando o sequelize deve estar funcionando corretamente.
+      Prontinho! Se você segui os passos sua conexão com banco de dados utilizando o sequelize deve estar funcionando corretamente.
     </p>
+    
     <p>
       O próximo passo é criar as models, mas essa vai ficar pra uma próxima.
 
