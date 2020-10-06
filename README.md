@@ -10,21 +10,9 @@ Você pode conferir o site [clicando aqui](https://mchjohn.github.io/devario/)
 
 <p align="center">
 <<<<<<< HEAD
-  <img src="https://github.com/mchjohn/devario/screenshots/Screenshot_1.png" />
+  <img src="https://github.com/mchjohn/devario/blob/screenshots/Screenshot_1.png" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/mchjohn/devario/screenshots/Screenshot_2.png" />
-=======
-  <img src="https://github.com/mchjohn/devario/screenshoots/Screenshot_1.png" />
+  <img src="https://github.com/mchjohn/devario/blob/screenshots/Screenshot_2.png" />
 </p>
-
-<p align="center">
-  <img src="https://github.com/mchjohn/devario/screenshoots/Screenshot_2.png" />
->>>>>>> 3a003bdb4c4b9e776a971a28e6c66203082188c2
-</p>
-
-
-
-
-
