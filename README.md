@@ -10,9 +10,9 @@ Você pode conferir o site [clicando aqui](https://mchjohn.github.io/devario/)
 
 <p align="center">
 <<<<<<< HEAD
-  <img src="https://github.com/mchjohn/devario/blob/screenshots/Screenshot_1.png" />
+  <img src="https://github.com/mchjohn/devario/blob/master/screenshots/Screenshot_1.png" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/mchjohn/devario/blob/screenshots/Screenshot_2.png" />
+  <img src="https://github.com/mchjohn/devario/blob/master/screenshots/Screenshot_2.png" />
 </p>
