@@ -59,6 +59,11 @@ p {
   font-size: 1em;
 }
 
+.code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8em;
+}
+
 .data {
   margin-top: 10px;
   background-color: #24bfcf;

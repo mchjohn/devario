@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="article.css">
+  <title>Entendendo o Map</title>
+</head>
+
+<body>
+  <div class="article">
+    <h1>Função MAP()</h1>
+
+    <p>
+      Fala pessoal, hoje vou estar falando e mostrando a vocês como funciona a função MAP do JavaScript.
+    </p>
+
+    <br>
+    <p>Bem, vamos ao código...</p>
+
+    <p>
+      Crie uma variável chamada <span class="code">nums</span> e atribua a ela o seguinte array, <span class="code">[1, 2, 3, 4, 5]</span>.
+    </p>
+
+    <p>
+      Agora crie uma variável chamada result e atribua a ela a função <span class="code">map</span> em cima do array <span class="code">nums</span>.
+    </p>
+    <br>
+
+    <img src="../images/create-array-map.png" alt="Criando array" >
+    <span class="legende">Código para criar o array e atribuir a váriavel.</span>
+
+    <br>
+    <p>
+      A função map irá receber uma função de callback, e essa função de callback pode receber três parâmetros: o próprio valor atual, o índice e o array completo.
+      <br>
+      Nesse caso só irei passar como parâmetro o valor atual dentro do parâmetro (<span class="code">e</span>).
+      <br>
+      Esse parâmetro vai conter o valor atual do array quando o map estiver fazendo seu laço, na primeira vez vai conter o elemento <span class="code">1</span> do array <span class="code">nums</span>, na segunda o elemento <span class="code">2</span> e assim por diante.
+    </p>
+
+    <br>
+    <p>
+      No corpo da função de callback, vamos colocar nossa condição para gerar o novo array, que no caso é multiplicar por <span class="code">2</span>, ou seja, teremos <span class="code">e * 2</span>, e devemos retornar esse resultado.
+    </p>
+
+    <br>
+    <img src="../images/apl-map.png" alt="Aplicando Map()" >
+    <span class="legende">Código para implementar o map().</span>
+
+    <br>
+    <p>
+      Nosso código final ficara como a imagem acima.
+    </p>
+
+    <p>
+      Rodando o código você vera o novo array no output, como mostra a imagem abaixo.
+    </p>
+
+    <br>
+    <img src="../images/result-map.png" alt="Resultado do map()">
+    <span class="legende">Resultado do console.log após o map().</span>
+
+    <br>
+    <p>Bom galera, então basicamente é isso, espero que vocês tenham entendido.</p>
+
+    <p>
+      Muito obrigado, até a proxima! <span style="color:#af2598;">\0></span>
+    </p>
+
+    <div class="data">08/10/2020</div>
+  </div>
+
+  <footer>
+    <p>© Michel John</p>
+  </footer>
+</body>
+
+</html>
